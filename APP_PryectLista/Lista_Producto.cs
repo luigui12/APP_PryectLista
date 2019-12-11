@@ -26,7 +26,14 @@ namespace APP_PryectLista
             producto.precio = Double.Parse (this.precio.Text);
             producto.fecha = DateTime.Parse(this.fecha.Text);
             producto.unidad =int.Parse (this.unidad.Text);
-
+            /*if (this.codigo.Text.Length==0)
+            {
+                MessageBox.Show("Cajas de datos vacios....!");
+            }
+            else
+            {
+                productos.Add(producto);
+            }*/
             productos.Add(producto);
             //MOSTRAR LOS ESTUDIANTES EN EL LISTVIEW
             ListViewItem horizontal = new ListViewItem(producto.codigo);
@@ -36,6 +43,14 @@ namespace APP_PryectLista
             horizontal.SubItems.Add(producto.fecha.ToString());
             horizontal.SubItems.Add(producto.unidad.ToString());
             MessageBox.Show("Datos Agregados con exito...");
+
+            this.codigo.Clear();
+            this.nombre.Clear();
+            this.fecha.Clear();
+            this.unidad.Clear();
+            this.precio.Clear();
+
+
         }
 
         private void nuevo_Click(object sender, EventArgs e)
