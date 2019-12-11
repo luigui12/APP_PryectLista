@@ -13,4 +13,12 @@ namespace APP_PryectLista.Clases
         public String estado_civil { get; set; }
         public int edad { get; set; }
     }
+    class Productos
+    {
+        public String codigo { get; set; }
+        public String nombre { get; set; }
+        public Double precio { get; set; }
+        public DateTime fecha { get; set; }
+        public int unidad { get; set; }
+    }
 }
